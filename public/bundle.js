@@ -20517,7 +20517,7 @@
 		},
 
 		emitChange: function() {
-			var editor = this.refs.editor.getDOMNode(),
+			var editor = React.findDOMNode(this.refs.editor),
 				newHtml = editor.innerHTML;
 
 			this.setState({html: newHtml}, function() {
@@ -20690,6 +20690,7 @@
 			);
 		}
 	});
+
 
 /***/ }
 /******/ ]);
