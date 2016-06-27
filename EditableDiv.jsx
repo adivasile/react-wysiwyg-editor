@@ -1,5 +1,6 @@
 'use strict';
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 module.exports = React.createClass({
 	displayName: 'EditableDiv',
@@ -15,7 +16,7 @@ module.exports = React.createClass({
 	},
 
 	emitChange: function() {
-		var editor = React.findDOMNode(this.refs.editor),
+		var editor = ReactDOM.findDOMNode(this.refs.editor),
 			newHtml = editor.innerHTML;
 
 		this.setState({html: newHtml}, function() {
